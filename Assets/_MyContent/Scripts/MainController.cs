@@ -6,10 +6,10 @@ using Vuforia;
 
 public class MainController : MonoBehaviour {
 
-	public static MainController Instance;  //синглтон
-	public static int MarkedCells=0;        //количество отмеченных ячеек
+	public static MainController Instance;  //синглтон	
+	public static int MarkedCells=0;        //количество отмеченных ячеек  
 	public enum nextMoveEnum { O, X };
-	public static nextMoveEnum NextMove;	//значение следующего хода.  крестик или нолик
+	public static nextMoveEnum NextMove;	//значение следующего хода.  крестик или нолик   
 
 	public float CellSize;  //размер игрового поля
 		
@@ -45,7 +45,7 @@ public class MainController : MonoBehaviour {
 	{
 		MarkedCells = 0;
 		NextMove = nextMoveEnum.X;
-		NextMoveInfo.text = "следующий ход: X";
+		NextMoveInfo.text = "следующий ход: X";   //"the next move is X"  
 		BtnNewGame.gameObject.SetActive(false);
 		WinnerInfo.text = "";
 		
@@ -99,13 +99,13 @@ public class MainController : MonoBehaviour {
 		if (NextMove == nextMoveEnum.O)
 		{
 			NextMove = nextMoveEnum.X;
-			NextMoveInfo.text = "следующий ход: X";
+			NextMoveInfo.text = "следующий ход: X";   ////"the next move is X"
 		}
 		else
 		{
 
 			NextMove = nextMoveEnum.O;
-			NextMoveInfo.text = "следующий ход: O";
+			NextMoveInfo.text = "следующий ход: O";    ///"the next move is O"
 		}
 
 	}
@@ -115,7 +115,7 @@ public class MainController : MonoBehaviour {
 	{
 		BtnNewGame.gameObject.SetActive(true);
 
-		WinnerInfo.text=(winnersState ==Cell_Controller.CellStatusEnum.O)? "Победили нолики": "Победили крестики";
+		WinnerInfo.text=(winnersState ==Cell_Controller.CellStatusEnum.O)? "Победили нолики": "Победили крестики";     //"Nulls won" : "Crosses won"
 
 		NextMoveInfo.text = "";
 		foreach (GameObject cell in Cells)
@@ -185,7 +185,7 @@ public class MainController : MonoBehaviour {
 
 
 
-		//проверка по диагонали 1
+		//проверка по диагонали 2
 		if ((Cells[2].GetComponent<Cell_Controller>().CellStatus == Cells[4].GetComponent<Cell_Controller>().CellStatus) &&
 			(Cells[2].GetComponent<Cell_Controller>().CellStatus == Cells[6].GetComponent<Cell_Controller>().CellStatus))
 			if (Cells[2].GetComponent<Cell_Controller>().CellStatus!=Cell_Controller.CellStatusEnum.empty)

@@ -794,7 +794,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: DEVAR_TARGETMaterial
+  m_Name: CrossNull_TARGETMaterial
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -807,7 +807,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bfb420306f9f45b8af08db1c1e0d18a3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 593e4ccaeeaa4b0ab3e9e7c9553f1d16, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -1203,10 +1203,10 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: DEVAR_TARGET
+  mTrackableName: CrossNull_TARGET
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/KrestNullDB.xml
+  mDataSetPath: Vuforia/CrossNull_toGit.xml
   mExtendedTracking: 0
   mAspectRatio: 1
   mImageTargetType: 0
